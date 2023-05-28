@@ -135,5 +135,6 @@ client_*.json
 credentials.json
 auth.json
 
-# repo specific 
+# repo specific
+images/**
 user.manifest.json
