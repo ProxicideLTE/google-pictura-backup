@@ -4,14 +4,15 @@
   "description": "Retrieve photos from Google Photos and store them in specified directories.",
   "scripts": {
     "albums": "node user.albums.js",
-    "backup": "node main.js"
+    "backup": "node user.backup.js",
+    "test": "jest"
   },
+  "jest": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ProxicideLTE/pictura-backup.git"
   },
   "author": "Jayvin Duong",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ProxicideLTE/pictura-backup/issues"
   },
@@ -21,7 +22,8 @@
     "googleapis": "^118.0.0",
     "googlephotos": "^0.3.5",
     "open": "^8.4.2",
-    "server-destroy": "^1.0.1"
+    "server-destroy": "^1.0.1",
+    "validate-fields": "^5.1.1"
   },
   "devDependencies": {
     "jest": "^29.5.0"

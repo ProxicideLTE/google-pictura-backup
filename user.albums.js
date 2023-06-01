@@ -10,7 +10,7 @@ const main = async () => {
   
   await photos.initPhotoAPI(access_token);
   const userAlbums = await photos.getUserAlbums();
-  console.log(userAlbums);
+  console.table(userAlbums);
 };
 
 main();
