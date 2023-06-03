@@ -4,6 +4,7 @@
   "description": "Retrieve photos from Google Photos and store them in specified directories.",
   "scripts": {
     "albums": "node user.albums.js",
+    "download": "node user.download.js",
     "backup": "node user.backup.js",
     "test": "jest"
   },

@@ -1,6 +1,6 @@
 # Google Pictura Backup
 
-This repo is intended to download and backup photos from certain albums in [Google Photos](https://photos.google.com/) using the [API](https://developers.google.com/photos). Then take those files and store them in specific directories on your machine or even on network-attached storage (NAS) drives. This is help automate the [3-2-1 backup strategy](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/).
+This repo is intended to download and backup photos from certain albums in [Google Photos](https://photos.google.com/) using the [API](https://developers.google.com/photos). Then take those files and store them in specific directories on your machine or even on network-attached storage (NAS) drives. This is to help automate part of the [3-2-1 backup strategy](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) without doing all the manual work.
 
 
 Finally, "Pictura" is latin for "Picture".
@@ -49,24 +49,35 @@ Example:
 Refer to the user albums command below to see the album IDs you need for this manifest file.
 
 ### Album Name
-Folder name that the photos will be stored in. Doesn't need to match the name defined in Google Photos.
+**Folder name** that the album photos will be stored in. Name doesn't need to match the album name in Google Photos.
+
+e.g. Drawings
 
 ### Directories
-Array of directories/paths the photos will be copied to.
+Array of directories/paths the photos will be copied to. Can include network paths.
+
+e.g. "Z:/Art/Catalog/"
 
 # Usage
-WIP
 
-## User Albums
-To see a list of albums to backup defined in your Google Photos account run the following command:
+## Get User Albums
+To see a list of albums in your Google Photos account, run the following command:
 ```
 npm run albums
 ```
 
-After the output you can see the details to populate the `user.manifest.json` file.
+After the output you can see the details for each album you need to populate the `user.manifest.json` file.
+
+## Download Album Photos
+To download all the photos for each album in the `user.manifest.json` file. Run the following command:
+```
+npm run download
+```
+
+Each album will be stored in the `images` directory in it's own folder defined in the `user.manifest.json` file.
 
 ## Backup
-After filling out the `user.manifest.json` file. To backup files use the following command in the your terminal:
+To copy and the local photo albums in the `images` directory. Run the following command:
 ```
 npm run backup
 ```
