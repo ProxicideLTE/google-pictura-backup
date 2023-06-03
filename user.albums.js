@@ -1,4 +1,7 @@
 /**
+ * @file user.albums.js
+ * 
+ * This file will output all albums the user has created in Google Photos.
  * 
  */
 const authentication = require("./lib/authenticate.js");
